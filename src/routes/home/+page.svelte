@@ -1,3 +1,7 @@
+<script>
+  let { data, children } = $props();
+</script>
+
 <div class="hero bg-base-200 min-h-screen">
     <div class="hero-content text-start">
       <div class="max-w-md">
@@ -6,52 +10,19 @@
           Let a drunk incompetent contemporary (AI) artist edit your photo
         </p>
 <form method="post">
-      <!-- carousel -->
-      <div class="carousel rounded-box w-64">
-        <div class="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-            class="w-full"
-            alt="Tailwind CSS Carousel component" />
+  <!-- carousel -->
+      <div class="carousel w-full">
+        {#each data.photos as photo }
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="{ photo }" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
         </div>
-        <div class="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-            class="w-full"
-            alt="Tailwind CSS Carousel component" />
-        </div>
-        <div class="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-            class="w-full"
-            alt="Tailwind CSS Carousel component" />
-        </div>
-        <div class="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-            class="w-full"
-            alt="Tailwind CSS Carousel component" />
-        </div>
-        <div class="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-            class="w-full"
-            alt="Tailwind CSS Carousel component" />
-        </div>
-        <div class="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-            class="w-full"
-            alt="Tailwind CSS Carousel component" />
-        </div>
-        <div class="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-            class="w-full"
-            alt="Tailwind CSS Carousel component" />
-        </div>
+        {/each}
       </div>
-      <!-- // carousel -->
+<!-- //carousel -->
 
         <fieldset class="fieldset">
           <legend class="fieldset-legend">Pick a file</legend>

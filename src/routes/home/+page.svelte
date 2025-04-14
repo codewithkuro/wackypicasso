@@ -49,7 +49,7 @@
 <div class="hero bg-base-200 min-h-screen" aria-role="photo-selector" onkeydown={keyDown}>
     <div class="hero-content text-start">
       <div class="max-w-md">
-        <h1 class="text-5xl font-bold text-left">upload a photo</h1>
+        <h1 class="text-5xl font-bold text-left">Edit your photo</h1>
         <p class="py-6 text-left">
           Let a drunk incompetent contemporary (AI) artist edit your photo
         </p>

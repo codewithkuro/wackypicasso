@@ -2,7 +2,7 @@ import { default as axios } from 'axios';
 
 const API_BASE_URL = 'http://codegarage.cloud:8000';
 
-async function apiRequest(method, endpoint, data = null) {
+export async function apiRequest(method, endpoint, data = null) {
   try {
     const response = await axios({
       method,
@@ -15,4 +15,4 @@ async function apiRequest(method, endpoint, data = null) {
   }
 }
 
-await apiRequest('GET', '/buckets');
+// export default { apiRequest };

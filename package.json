@@ -4,7 +4,8 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"listBuckets": "node akaveClient.js",
+		"listBuckets": "node listBuckets.js",
+		"listFiles": "node listFiles.js",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
